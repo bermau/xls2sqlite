@@ -55,6 +55,8 @@ class Xls2Sqlite():
         self.db_name = sqlite_file
         self.xls_file=xls_file
         self.ws_dict={}
+##        if not os.isfile(sqlite_file) :
+##            print("{} does not exist". format(sqlite_file))
         
         if new_db and os.path.isfile(self.db_name):
             os.remove(self.db_name)
@@ -144,7 +146,8 @@ self.ws_dict{'feuille1' : [1],
         pass
 def demo2():
 
-    AA = Xls2Sqlite(xls_file='essai.xls', sqlite_file='test.sqlite')
+    AA = Xls2Sqlite(xls_file='tests/input/essai.xlsx',
+                    sqlite_file='tests/output/test.sqlite')
 
         
 def _test():
